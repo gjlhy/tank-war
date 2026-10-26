@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>坦克大战 - Tank Battle</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>坦克大战</h1>
+            <div class="game-info">
+                <div class="score">得分: <span id="score">0</span></div>
+                <div class="health">生命值: <span id="health">100</span></div>
+            </div>
+        </header>
+
+        <main>
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <div class="game-controls">
+                <div class="control-hint">
+                    <p>使用 WASD 移动坦克</p>
+                    <p>鼠标点击发射子弹</p>
+                </div>
+                <button id="startBtn" class="btn">开始游戏</button>
+                <button id="pauseBtn" class="btn" disabled>暂停</button>
+            </div>
+        </main>
+
+        <div id="gameOver" class="game-over hidden">
+            <h2>游戏结束</h2>
+            <p>最终得分: <span id="finalScore">0</span></p>
+            <button id="restartBtn" class="btn">重新开始</button>
+        </div>
+    </div>
+
+    <script src="js/tank.js"></script>
+    <script src="js/bullet.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
